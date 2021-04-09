@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar class="ios hydrated">
+    <ion-title class="ios title-ios hydrated">Booking</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list lines="full">
+    <form [formGroup]="bookingForm" (ngSubmit)="formSubmit()">
+      <ion-item>
+        <ion-label position="floating">Name</ion-label>
+        <ion-input formControlName="name" type="text" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input formControlName="email" type="text" required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Mobile</ion-label>
+        <ion-input formControlName="mobile" type="text" required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">First Time Visit</ion-label>
+        <ion-checkbox formControlName="firstVisit" color="primary"></ion-checkbox>
+      </ion-item>
+
+      <ion-radio-group formControlName="paymentType" value="cash">
+        <ion-list-header>
+          <ion-label>Mode of Payment</ion-label>
+        </ion-list-header>
+    
+        <ion-item>
+          <ion-label>Cash</ion-label>
+          <ion-radio slot="start" value="cash"></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>Card</ion-label>
+          <ion-radio slot="start" value="card"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+
+
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" color="primary" shape="full" expand="block">Book Appointment</ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-list>
+</ion-content>
