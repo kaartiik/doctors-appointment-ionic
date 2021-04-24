@@ -14,7 +14,7 @@ export class AppComponent {
     {
       title: 'About',
       url: 'about',
-      icon: 'albums'
+      icon: 'information-circle'
     },
   ];
 

@@ -1,5 +1,5 @@
 {
-  "name": "ionic-firebase-setup",
+  "name": "doctors-appointment",
   "integrations": {
     "cordova": {}
   },
